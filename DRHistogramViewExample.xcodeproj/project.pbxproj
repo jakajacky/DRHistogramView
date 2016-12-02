@@ -12,6 +12,7 @@
 		F21FAA0C1DEEDD28007576F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F21FAA0A1DEEDD28007576F5 /* Main.storyboard */; };
 		F21FAA0E1DEEDD28007576F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F21FAA0D1DEEDD28007576F5 /* Assets.xcassets */; };
 		F21FAA111DEEDD28007576F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F21FAA0F1DEEDD28007576F5 /* LaunchScreen.storyboard */; };
+		F21FAA191DEEDD49007576F5 /* DRHistogramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21FAA181DEEDD49007576F5 /* DRHistogramView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		F21FAA0D1DEEDD28007576F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F21FAA101DEEDD28007576F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F21FAA121DEEDD28007576F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F21FAA181DEEDD49007576F5 /* DRHistogramView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRHistogramView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				F21FAA061DEEDD28007576F5 /* AppDelegate.swift */,
 				F21FAA081DEEDD28007576F5 /* ViewController.swift */,
+				F21FAA181DEEDD49007576F5 /* DRHistogramView.swift */,
 				F21FAA0A1DEEDD28007576F5 /* Main.storyboard */,
 				F21FAA0D1DEEDD28007576F5 /* Assets.xcassets */,
 				F21FAA0F1DEEDD28007576F5 /* LaunchScreen.storyboard */,
@@ -96,6 +99,7 @@
 				TargetAttributes = {
 					F21FAA021DEEDD28007576F5 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = X342LX7QRW;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -136,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F21FAA191DEEDD49007576F5 /* DRHistogramView.swift in Sources */,
 				F21FAA091DEEDD28007576F5 /* ViewController.swift in Sources */,
 				F21FAA071DEEDD28007576F5 /* AppDelegate.swift in Sources */,
 			);
@@ -260,7 +265,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = X342LX7QRW;
 				INFOPLIST_FILE = DRHistogramViewExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zxq.DRHistogramViewExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -272,7 +279,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = X342LX7QRW;
 				INFOPLIST_FILE = DRHistogramViewExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zxq.DRHistogramViewExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -299,6 +308,7 @@
 				F21FAA171DEEDD28007576F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
