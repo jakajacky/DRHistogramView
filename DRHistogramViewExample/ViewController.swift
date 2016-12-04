@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     // Do any additional setup after loading the view, typically from a nib.
 //    let hi = DRHistogramView(frame: CGRect(x: 100, y: 100, width: 200, height: 50))
     hi.backgroundColor = UIColor.clear
-    hi.proportion = 100
+    hi.proportion = 0
     self.view.addSubview(hi)
     
     let timer = Timer(timeInterval: 1, target: self, selector: #selector(time), userInfo: nil, repeats: true)
