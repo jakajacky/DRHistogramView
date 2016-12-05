@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F20E5F8B1DF53D0D0069088D /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F20E5F8A1DF53D0D0069088D /* NotificationCenter.framework */; };
+		F20E5F8E1DF53D0D0069088D /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20E5F8D1DF53D0D0069088D /* TodayViewController.swift */; };
+		F20E5F911DF53D0D0069088D /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F20E5F8F1DF53D0D0069088D /* MainInterface.storyboard */; };
+		F20E5F951DF53D0D0069088D /* MemoryReview.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F20E5F881DF53D0D0069088D /* MemoryReview.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F20E5F9C1DF53F2F0069088D /* DRHistogramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21FAA181DEEDD49007576F5 /* DRHistogramView.swift */; };
 		F21FAA071DEEDD28007576F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21FAA061DEEDD28007576F5 /* AppDelegate.swift */; };
 		F21FAA091DEEDD28007576F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21FAA081DEEDD28007576F5 /* ViewController.swift */; };
 		F21FAA0C1DEEDD28007576F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F21FAA0A1DEEDD28007576F5 /* Main.storyboard */; };
@@ -15,7 +20,38 @@
 		F21FAA191DEEDD49007576F5 /* DRHistogramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21FAA181DEEDD49007576F5 /* DRHistogramView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		F20E5F931DF53D0D0069088D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F21FA9FB1DEEDD28007576F5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F20E5F871DF53D0D0069088D;
+			remoteInfo = MemoryReview;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F20E5F991DF53D0D0069088D /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F20E5F951DF53D0D0069088D /* MemoryReview.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		F20E5F881DF53D0D0069088D /* MemoryReview.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MemoryReview.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		F20E5F8A1DF53D0D0069088D /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		F20E5F8D1DF53D0D0069088D /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		F20E5F901DF53D0D0069088D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		F20E5F921DF53D0D0069088D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F20E5F9A1DF53D3C0069088D /* DRHistogramViewExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DRHistogramViewExample.entitlements; sourceTree = "<group>"; };
+		F20E5F9B1DF53D690069088D /* MemoryReview.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MemoryReview.entitlements; sourceTree = "<group>"; };
 		F21FAA031DEEDD28007576F5 /* DRHistogramViewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DRHistogramViewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F21FAA061DEEDD28007576F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F21FAA081DEEDD28007576F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -27,6 +63,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F20E5F851DF53D0D0069088D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F20E5F8B1DF53D0D0069088D /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F21FAA001DEEDD28007576F5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -37,10 +81,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F20E5F891DF53D0D0069088D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F20E5F8A1DF53D0D0069088D /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F20E5F8C1DF53D0D0069088D /* MemoryReview */ = {
+			isa = PBXGroup;
+			children = (
+				F20E5F9B1DF53D690069088D /* MemoryReview.entitlements */,
+				F20E5F8D1DF53D0D0069088D /* TodayViewController.swift */,
+				F20E5F8F1DF53D0D0069088D /* MainInterface.storyboard */,
+				F20E5F921DF53D0D0069088D /* Info.plist */,
+			);
+			path = MemoryReview;
+			sourceTree = "<group>";
+		};
 		F21FA9FA1DEEDD28007576F5 = {
 			isa = PBXGroup;
 			children = (
 				F21FAA051DEEDD28007576F5 /* DRHistogramViewExample */,
+				F20E5F8C1DF53D0D0069088D /* MemoryReview */,
+				F20E5F891DF53D0D0069088D /* Frameworks */,
 				F21FAA041DEEDD28007576F5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				F21FAA031DEEDD28007576F5 /* DRHistogramViewExample.app */,
+				F20E5F881DF53D0D0069088D /* MemoryReview.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,6 +122,7 @@
 		F21FAA051DEEDD28007576F5 /* DRHistogramViewExample */ = {
 			isa = PBXGroup;
 			children = (
+				F20E5F9A1DF53D3C0069088D /* DRHistogramViewExample.entitlements */,
 				F21FAA061DEEDD28007576F5 /* AppDelegate.swift */,
 				F21FAA081DEEDD28007576F5 /* ViewController.swift */,
 				F21FAA181DEEDD49007576F5 /* DRHistogramView.swift */,
@@ -70,6 +137,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		F20E5F871DF53D0D0069088D /* MemoryReview */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F20E5F981DF53D0D0069088D /* Build configuration list for PBXNativeTarget "MemoryReview" */;
+			buildPhases = (
+				F20E5F841DF53D0D0069088D /* Sources */,
+				F20E5F851DF53D0D0069088D /* Frameworks */,
+				F20E5F861DF53D0D0069088D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MemoryReview;
+			productName = MemoryReview;
+			productReference = F20E5F881DF53D0D0069088D /* MemoryReview.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		F21FAA021DEEDD28007576F5 /* DRHistogramViewExample */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F21FAA151DEEDD28007576F5 /* Build configuration list for PBXNativeTarget "DRHistogramViewExample" */;
@@ -77,10 +161,12 @@
 				F21FA9FF1DEEDD28007576F5 /* Sources */,
 				F21FAA001DEEDD28007576F5 /* Frameworks */,
 				F21FAA011DEEDD28007576F5 /* Resources */,
+				F20E5F991DF53D0D0069088D /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F20E5F941DF53D0D0069088D /* PBXTargetDependency */,
 			);
 			name = DRHistogramViewExample;
 			productName = DRHistogramViewExample;
@@ -97,10 +183,25 @@
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = xqzh;
 				TargetAttributes = {
+					F20E5F871DF53D0D0069088D = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = X342LX7QRW;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
 					F21FAA021DEEDD28007576F5 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = X342LX7QRW;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -118,11 +219,20 @@
 			projectRoot = "";
 			targets = (
 				F21FAA021DEEDD28007576F5 /* DRHistogramViewExample */,
+				F20E5F871DF53D0D0069088D /* MemoryReview */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F20E5F861DF53D0D0069088D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F20E5F911DF53D0D0069088D /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F21FAA011DEEDD28007576F5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -136,6 +246,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F20E5F841DF53D0D0069088D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F20E5F8E1DF53D0D0069088D /* TodayViewController.swift in Sources */,
+				F20E5F9C1DF53F2F0069088D /* DRHistogramView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F21FA9FF1DEEDD28007576F5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -148,7 +267,23 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		F20E5F941DF53D0D0069088D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F20E5F871DF53D0D0069088D /* MemoryReview */;
+			targetProxy = F20E5F931DF53D0D0069088D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		F20E5F8F1DF53D0D0069088D /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F20E5F901DF53D0D0069088D /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		F21FAA0A1DEEDD28007576F5 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -168,6 +303,34 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		F20E5F961DF53D0D0069088D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = MemoryReview/MemoryReview.entitlements;
+				DEVELOPMENT_TEAM = X342LX7QRW;
+				INFOPLIST_FILE = MemoryReview/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zxq.DRHistogramViewExample.MemoryReview;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		F20E5F971DF53D0D0069088D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = MemoryReview/MemoryReview.entitlements;
+				DEVELOPMENT_TEAM = X342LX7QRW;
+				INFOPLIST_FILE = MemoryReview/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zxq.DRHistogramViewExample.MemoryReview;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		F21FAA131DEEDD28007576F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -264,7 +427,9 @@
 		F21FAA161DEEDD28007576F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DRHistogramViewExample/DRHistogramViewExample.entitlements;
 				DEVELOPMENT_TEAM = X342LX7QRW;
 				INFOPLIST_FILE = DRHistogramViewExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -278,7 +443,9 @@
 		F21FAA171DEEDD28007576F5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DRHistogramViewExample/DRHistogramViewExample.entitlements;
 				DEVELOPMENT_TEAM = X342LX7QRW;
 				INFOPLIST_FILE = DRHistogramViewExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -292,6 +459,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F20E5F981DF53D0D0069088D /* Build configuration list for PBXNativeTarget "MemoryReview" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F20E5F961DF53D0D0069088D /* Debug */,
+				F20E5F971DF53D0D0069088D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		F21FA9FE1DEEDD28007576F5 /* Build configuration list for PBXProject "DRHistogramViewExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

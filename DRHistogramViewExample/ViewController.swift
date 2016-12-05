@@ -10,12 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
   var i:CGFloat = 0.0
-  let hi = DRHistogramView(frame: CGRect(x: 100, y: 100, width: 200, height: 50))
+  let hi = DRHistogramView(frame: CGRect(x: 100, y: 10, width: 200, height: 50))
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
 //    let hi = DRHistogramView(frame: CGRect(x: 100, y: 100, width: 200, height: 50))
     hi.backgroundColor = UIColor.clear
+    hi.histogramColor  = UIColor(red: 154/255.0, green: 85/255.0, blue: 252/255.0, alpha: 1)
     hi.proportion = 0
     self.view.addSubview(hi)
     
