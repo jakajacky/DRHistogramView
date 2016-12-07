@@ -22,6 +22,7 @@ class DRHistogramView: UIView {
   var path:CGPath!                                 // 路径
   var text:NSString!                               // 显示
   var histogramColor:UIColor!   = UIColor.red      // 颜色,默认红色
+  var showWithNumber:Bool!      = false            // 以实际数值显示，默认false（按比例显示）
   var proportion:CGFloat! {                        // 占比
     didSet {
       self.setNeedsDisplay()
@@ -45,8 +46,8 @@ class DRHistogramView: UIView {
 //    histogramColor = UIColor(red: 154/255.0, green: 85/255.0, blue: 252/255.0, alpha: 1)
     
     backHisto.frame       = self.bounds
-    backHisto.fillColor   = UIColor.gray.cgColor
-    backHisto.strokeColor = UIColor.gray.cgColor
+    backHisto.fillColor   = UIColor(red: 169/255.0, green: 169/255.0, blue: 169/255.0, alpha: 0.5).cgColor
+    backHisto.strokeColor = UIColor(red: 169/255.0, green: 169/255.0, blue: 169/255.0, alpha: 0.5).cgColor
     let backPath          = CGPath(roundedRect: self.bounds,
                                    cornerWidth: 5,
                                    cornerHeight: 5,
@@ -89,7 +90,13 @@ class DRHistogramView: UIView {
       histogram.add(animation, forKey: "path")
     
       let pro:Int    = Int(proportion / width * 100)
-      textLayer.text = "\(pro)%" as NSString!
+      let value      = NSString(format: "%.1fG", proportion!)
+      if showWithNumber! {
+        textLayer.text = value
+      }
+      else {
+        textLayer.text = "\(pro)%" as NSString!
+      }
       textLayer.setNeedsDisplay()
       
     }
