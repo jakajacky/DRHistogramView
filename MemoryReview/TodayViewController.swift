@@ -46,12 +46,17 @@ class TodayViewController: UIViewController, NCWidgetProviding {
   
   func time() {
     i += 10
+    var m:CGFloat = 0.0
+    
+      let mem = MemoryCaculate()
+      m = CGFloat(mem.availableMemory())
+      print("meory:\(m)")
+    
     
     hi.proportion = self.i
-    he.proportion = self.i
+    he.proportion = (2048 - m) / 2048.0 * 162.0
   }
-
-    
+  
   private func widgetPerformUpdate(completionHandler: ((NCUpdateResult) -> Void)) {
       // Perform any setup necessary in order to update the view.
       
