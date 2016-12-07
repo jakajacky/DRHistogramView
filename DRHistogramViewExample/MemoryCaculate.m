@@ -10,6 +10,7 @@
 
 #import <sys/sysctl.h>
 #import <mach/mach.h>
+@import Darwin.sys.mount;
 
 @implementation MemoryCaculate
 
@@ -46,6 +47,16 @@
   }
   
   return taskInfo.resident_size / 1024.0 / 1024.0;
+}
+
+// 获取剩余存储空间
+- (NSString *) freeDiskSpaceInBytes{
+  struct statfs buf;
+  long long freespace = -1;
+  if(statfs("/var", &buf) >= 0){
+    freespace = (double)(buf.f_bsize * buf.f_bfree);
+  }
+  return [NSString stringWithFormat:@"手机剩余存储空间为：%lf MB" ,freespace/1024.0/1024.0];
 }
 
 @end

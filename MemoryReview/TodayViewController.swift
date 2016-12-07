@@ -22,6 +22,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     hi.backgroundColor = UIColor.clear
     hi.histogramColor  = UIColor(red: 34/255.0, green: 111/255.0, blue: 224/255.0, alpha: 1)
     hi.proportion      = 0
+    hi.showWithNumber  = true
     hi.frame           = CGRect(x: 181, y: 50, width: 162, height: 50)
     self.view.addSubview(hi)
     
@@ -46,14 +47,15 @@ class TodayViewController: UIViewController, NCWidgetProviding {
   
   func time() {
     i += 10
-    var m:CGFloat = 0.0
     
-      let mem = MemoryCaculate()
-      m = CGFloat(mem.availableMemory())
-      print("meory:\(m)")
+    let mem = MemoryCaculate()
+    let m:CGFloat = CGFloat(mem.availableMemory())
+
+    let space = DiskSpaceCaculate()
+    let s:CGFloat = space.getDiskspace()
+    let total:CGFloat = space.getTotalDiskspace()
     
-    
-    hi.proportion = self.i
+    hi.proportion = total - s + 2.3
     he.proportion = (2048 - m) / 2048.0 * 162.0
   }
   

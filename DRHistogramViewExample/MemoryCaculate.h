@@ -12,4 +12,5 @@
 
 - (double)availableMemory;
 - (double)usedMemory;
+- (NSString *) freeDiskSpaceInBytes;
 @end

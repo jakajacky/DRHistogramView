@@ -20,6 +20,8 @@
 		F21FAA191DEEDD49007576F5 /* DRHistogramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21FAA181DEEDD49007576F5 /* DRHistogramView.swift */; };
 		F2B145921DF7B08A00798416 /* MemoryCaculate.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B145911DF7B08A00798416 /* MemoryCaculate.m */; };
 		F2B145931DF7B21E00798416 /* MemoryCaculate.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B145911DF7B08A00798416 /* MemoryCaculate.m */; };
+		F2B145961DF7E65E00798416 /* DiskSpaceCaculate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B145951DF7E65D00798416 /* DiskSpaceCaculate.swift */; };
+		F2B145971DF7E65E00798416 /* DiskSpaceCaculate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B145951DF7E65D00798416 /* DiskSpaceCaculate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,7 @@
 		F2B1458F1DF7B08900798416 /* DRHistogramViewExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DRHistogramViewExample-Bridging-Header.h"; sourceTree = "<group>"; };
 		F2B145901DF7B08A00798416 /* MemoryCaculate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoryCaculate.h; sourceTree = "<group>"; };
 		F2B145911DF7B08A00798416 /* MemoryCaculate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoryCaculate.m; sourceTree = "<group>"; };
+		F2B145951DF7E65D00798416 /* DiskSpaceCaculate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskSpaceCaculate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +136,7 @@
 				F21FAA181DEEDD49007576F5 /* DRHistogramView.swift */,
 				F2B145901DF7B08A00798416 /* MemoryCaculate.h */,
 				F2B145911DF7B08A00798416 /* MemoryCaculate.m */,
+				F2B145951DF7E65D00798416 /* DiskSpaceCaculate.swift */,
 				F21FAA0A1DEEDD28007576F5 /* Main.storyboard */,
 				F21FAA0D1DEEDD28007576F5 /* Assets.xcassets */,
 				F21FAA0F1DEEDD28007576F5 /* LaunchScreen.storyboard */,
@@ -262,6 +266,7 @@
 				F2B145931DF7B21E00798416 /* MemoryCaculate.m in Sources */,
 				F20E5F8E1DF53D0D0069088D /* TodayViewController.swift in Sources */,
 				F20E5F9C1DF53F2F0069088D /* DRHistogramView.swift in Sources */,
+				F2B145971DF7E65E00798416 /* DiskSpaceCaculate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +278,7 @@
 				F21FAA091DEEDD28007576F5 /* ViewController.swift in Sources */,
 				F2B145921DF7B08A00798416 /* MemoryCaculate.m in Sources */,
 				F21FAA071DEEDD28007576F5 /* AppDelegate.swift in Sources */,
+				F2B145961DF7E65E00798416 /* DiskSpaceCaculate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
