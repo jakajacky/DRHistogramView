@@ -104,14 +104,39 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pPI-fR-9H3">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="1" id="xMw-Pl-H59"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WIFI.png" translatesAutoresizingMaskIntoConstraints="NO" id="iX1-Im-hFb">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="pNz-Vc-4le"/>
+                                    <constraint firstAttribute="height" constant="24" id="ti3-aJ-UsJ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBA-JP-Qlu">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Kpn-wA-ZEZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <constraints>
                             <constraint firstItem="UAk-vc-WvA" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="2fj-DW-aVJ"/>
                             <constraint firstItem="Ugw-PG-eDb" firstAttribute="top" secondItem="DPG-9c-wXT" secondAttribute="bottom" constant="8" id="41Y-hu-coU"/>
                             <constraint firstItem="Ugw-PG-eDb" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" constant="17" id="4Ic-Q6-xj4"/>
+                            <constraint firstItem="bBA-JP-Qlu" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="5Im-nU-4Ym"/>
+                            <constraint firstItem="bBA-JP-Qlu" firstAttribute="leading" secondItem="iX1-Im-hFb" secondAttribute="trailing" constant="20" id="9ND-Ra-kez"/>
                             <constraint firstItem="ZfS-s2-EpR" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" id="C1s-Of-2Oh"/>
+                            <constraint firstItem="pPI-fR-9H3" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="CGs-8V-JNO"/>
                             <constraint firstItem="DPG-9c-wXT" firstAttribute="leading" secondItem="Ugw-PG-eDb" secondAttribute="leading" constant="20" id="CWt-5I-I6q"/>
+                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="bBA-JP-Qlu" secondAttribute="bottom" constant="8" id="DfJ-LM-6am"/>
                             <constraint firstItem="sIY-iH-qdE" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" id="DyV-Zh-5jT"/>
+                            <constraint firstAttribute="bottom" secondItem="pPI-fR-9H3" secondAttribute="bottom" constant="4" id="EW2-aO-LOy"/>
                             <constraint firstItem="LZz-sO-Cuq" firstAttribute="trailing" secondItem="Ugw-PG-eDb" secondAttribute="trailing" constant="-20" id="Enf-ki-fke"/>
                             <constraint firstItem="sIY-iH-qdE" firstAttribute="leading" secondItem="jN0-SN-8em" secondAttribute="trailing" constant="-2.5" id="GFF-FW-HSM"/>
                             <constraint firstItem="Ugw-PG-eDb" firstAttribute="top" secondItem="LZz-sO-Cuq" secondAttribute="bottom" constant="8" id="GfA-w4-f3K"/>
@@ -119,7 +144,9 @@
                             <constraint firstItem="ZfS-s2-EpR" firstAttribute="centerY" secondItem="XdL-lT-EJD" secondAttribute="centerY" id="IMS-lN-M3n"/>
                             <constraint firstAttribute="trailing" secondItem="Ugw-PG-eDb" secondAttribute="trailing" constant="17" id="NmJ-B2-eaK"/>
                             <constraint firstItem="jN0-SN-8em" firstAttribute="centerY" secondItem="sIY-iH-qdE" secondAttribute="centerY" id="Qbk-MZ-J3M"/>
+                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="iX1-Im-hFb" secondAttribute="bottom" constant="8" id="Sgx-7A-LJZ"/>
                             <constraint firstItem="fVb-f8-mR0" firstAttribute="leading" secondItem="Srd-f3-gBZ" secondAttribute="trailing" constant="-2.5" id="Sy1-mg-BNs"/>
+                            <constraint firstItem="pPI-fR-9H3" firstAttribute="top" secondItem="S3S-Oj-5AN" secondAttribute="top" constant="51" id="UaA-65-f9i"/>
                             <constraint firstItem="LZz-sO-Cuq" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="8" id="crE-yp-z5s"/>
                             <constraint firstItem="DPG-9c-wXT" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="8" id="dqZ-Mk-qN2"/>
                             <constraint firstItem="UAk-vc-WvA" firstAttribute="leading" secondItem="sIY-iH-qdE" secondAttribute="trailing" constant="17" id="fjY-Jb-hLX"/>
@@ -142,10 +169,18 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="150"/>
+                    <connections>
+                        <outlet property="layoutAssitantor" destination="pPI-fR-9H3" id="vi9-qn-fpk"/>
+                        <outlet property="wifi" destination="iX1-Im-hFb" id="X6J-Rq-a0N"/>
+                        <outlet property="wifiLabel" destination="bBA-JP-Qlu" id="nRT-xe-4xc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7.2000000000000002" y="88.15592203898052"/>
+            <point key="canvasLocation" x="-216.80000000000001" y="91.754122938530742"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="WIFI.png" width="24" height="24"/>
+    </resources>
 </document>
