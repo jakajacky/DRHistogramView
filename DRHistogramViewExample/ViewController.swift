@@ -31,7 +31,7 @@ class ViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
 
-  func time() {
+  @objc func time() {
     i += 10
     
     hi.proportion = self.i

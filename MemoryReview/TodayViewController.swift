@@ -67,7 +67,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
   }
   
-  func time() {
+  @objc func time() {
     i += 10
     
     let mem = MemoryCaculate()

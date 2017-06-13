@@ -123,14 +123,14 @@ class HistogramLayer: CALayer {
     context.strokePath()
     
     // 文字颜色 文字背景颜色 文字大小
-    let md = [NSForegroundColorAttributeName:UIColor.white,
-              NSBackgroundColorAttributeName:UIColor.clear,
-              NSFontAttributeName:UIFont.systemFont(ofSize: 15)]
+    let md = [NSAttributedStringKey.foregroundColor:UIColor.white,
+              NSAttributedStringKey.backgroundColor:UIColor.clear,
+              NSAttributedStringKey.font:UIFont.systemFont(ofSize: 15)]
     
     //计算文字宽度
     let size:CGSize = text.boundingRect(with: CGSize(width: Double(MAXFLOAT), height: 26.0),
                                         options: NSStringDrawingOptions.usesLineFragmentOrigin,
-                                        attributes: [NSFontAttributeName:UIFont.systemFont(ofSize: 15)],
+                                        attributes: [NSAttributedStringKey.font:UIFont.systemFont(ofSize: 15)],
                                         context: nil).size
     
     // 将文字绘制到指定位置
