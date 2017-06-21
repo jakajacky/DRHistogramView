@@ -3,4 +3,4 @@
 //
 
 #import "MemoryCaculate.h"
-
+#import "NetSpeedCaculate.h"

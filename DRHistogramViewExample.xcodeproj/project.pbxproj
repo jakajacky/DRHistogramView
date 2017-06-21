@@ -7,6 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E20E71F1EEFC552007F2884 /* NetSpeedConvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E20E71E1EEFC552007F2884 /* NetSpeedConvert.swift */; };
+		6E20E7201EEFC552007F2884 /* NetSpeedConvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E20E71E1EEFC552007F2884 /* NetSpeedConvert.swift */; };
+		6ED8ABB91EFA79390001BEED /* cellular@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6ED8ABB71EFA79390001BEED /* cellular@2x.png */; };
+		6ED8ABBA1EFA79390001BEED /* cellular@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6ED8ABB71EFA79390001BEED /* cellular@2x.png */; };
+		6ED8ABBB1EFA79390001BEED /* cellular@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6ED8ABB81EFA79390001BEED /* cellular@3x.png */; };
+		6ED8ABBC1EFA79390001BEED /* cellular@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6ED8ABB81EFA79390001BEED /* cellular@3x.png */; };
+		6EECE0A21EEF87E70014F6D9 /* upspeed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EECE09E1EEF87E70014F6D9 /* upspeed@2x.png */; };
+		6EECE0A31EEF87E70014F6D9 /* upspeed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EECE09E1EEF87E70014F6D9 /* upspeed@2x.png */; };
+		6EECE0A41EEF87E70014F6D9 /* dspeed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EECE09F1EEF87E70014F6D9 /* dspeed@3x.png */; };
+		6EECE0A51EEF87E70014F6D9 /* dspeed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EECE09F1EEF87E70014F6D9 /* dspeed@3x.png */; };
+		6EECE0A61EEF87E70014F6D9 /* dspeed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EECE0A01EEF87E70014F6D9 /* dspeed@2x.png */; };
+		6EECE0A71EEF87E70014F6D9 /* dspeed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EECE0A01EEF87E70014F6D9 /* dspeed@2x.png */; };
+		6EECE0A81EEF87E70014F6D9 /* upspeed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EECE0A11EEF87E70014F6D9 /* upspeed@3x.png */; };
+		6EECE0A91EEF87E70014F6D9 /* upspeed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EECE0A11EEF87E70014F6D9 /* upspeed@3x.png */; };
+		6EFF1E161EEF9CEE0006A2E3 /* NetSpeedCaculate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EFF1E151EEF9CEE0006A2E3 /* NetSpeedCaculate.m */; };
+		6EFF1E171EEF9CEE0006A2E3 /* NetSpeedCaculate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EFF1E151EEF9CEE0006A2E3 /* NetSpeedCaculate.m */; };
+		6EFF1E201EEFBC530006A2E3 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFF1E1F1EEFBC340006A2E3 /* Reachability.swift */; };
+		6EFF1E211EEFBC540006A2E3 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFF1E1F1EEFBC340006A2E3 /* Reachability.swift */; };
 		F2052FF91E88B8010068A97F /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2052FD61E88B8010068A97F /* Constraint.swift */; };
 		F2052FFA1E88B8010068A97F /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2052FD61E88B8010068A97F /* Constraint.swift */; };
 		F2052FFB1E88B8010068A97F /* ConstraintAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2052FD71E88B8010068A97F /* ConstraintAttributes.swift */; };
@@ -123,6 +141,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6E20E71E1EEFC552007F2884 /* NetSpeedConvert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetSpeedConvert.swift; sourceTree = "<group>"; };
+		6ED8ABB71EFA79390001BEED /* cellular@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cellular@2x.png"; sourceTree = "<group>"; };
+		6ED8ABB81EFA79390001BEED /* cellular@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cellular@3x.png"; sourceTree = "<group>"; };
+		6EECE09E1EEF87E70014F6D9 /* upspeed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "upspeed@2x.png"; sourceTree = "<group>"; };
+		6EECE09F1EEF87E70014F6D9 /* dspeed@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dspeed@3x.png"; sourceTree = "<group>"; };
+		6EECE0A01EEF87E70014F6D9 /* dspeed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dspeed@2x.png"; sourceTree = "<group>"; };
+		6EECE0A11EEF87E70014F6D9 /* upspeed@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "upspeed@3x.png"; sourceTree = "<group>"; };
+		6EFF1E141EEF9CEE0006A2E3 /* NetSpeedCaculate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetSpeedCaculate.h; sourceTree = "<group>"; };
+		6EFF1E151EEF9CEE0006A2E3 /* NetSpeedCaculate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetSpeedCaculate.m; sourceTree = "<group>"; };
+		6EFF1E1F1EEFBC340006A2E3 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		F2052FD61E88B8010068A97F /* Constraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constraint.swift; sourceTree = "<group>"; };
 		F2052FD71E88B8010068A97F /* ConstraintAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintAttributes.swift; sourceTree = "<group>"; };
 		F2052FD81E88B8010068A97F /* ConstraintConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintConfig.swift; sourceTree = "<group>"; };
@@ -202,6 +230,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6EFF1E1E1EEFBC250006A2E3 /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				6EFF1E1F1EEFBC340006A2E3 /* Reachability.swift */,
+				6E20E71E1EEFC552007F2884 /* NetSpeedConvert.swift */,
+			);
+			path = Supports;
+			sourceTree = "<group>";
+		};
 		F2052FD51E88B8010068A97F /* Source */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,6 +296,12 @@
 				F20E5F8D1DF53D0D0069088D /* TodayViewController.swift */,
 				F20E5F8F1DF53D0D0069088D /* MainInterface.storyboard */,
 				F20E5F921DF53D0D0069088D /* Info.plist */,
+				6ED8ABB71EFA79390001BEED /* cellular@2x.png */,
+				6ED8ABB81EFA79390001BEED /* cellular@3x.png */,
+				6EECE0A01EEF87E70014F6D9 /* dspeed@2x.png */,
+				6EECE09F1EEF87E70014F6D9 /* dspeed@3x.png */,
+				6EECE09E1EEF87E70014F6D9 /* upspeed@2x.png */,
+				6EECE0A11EEF87E70014F6D9 /* upspeed@3x.png */,
 				F22B732C1E88FB18001301F7 /* WIFI1@2x.png */,
 				F205303D1E88C3590068A97F /* WIFI3@2x.png */,
 				F28F61AB1E88F85700D333D4 /* WIFI2@2x.png */,
@@ -294,6 +337,8 @@
 				F21FAA181DEEDD49007576F5 /* DRHistogramView.swift */,
 				F2B145901DF7B08A00798416 /* MemoryCaculate.h */,
 				F2B145911DF7B08A00798416 /* MemoryCaculate.m */,
+				6EFF1E141EEF9CEE0006A2E3 /* NetSpeedCaculate.h */,
+				6EFF1E151EEF9CEE0006A2E3 /* NetSpeedCaculate.m */,
 				F2B145951DF7E65D00798416 /* DiskSpaceCaculate.swift */,
 				F28F61A41E88C54400D333D4 /* CurrentWIFIManager.swift */,
 				F21FAA0A1DEEDD28007576F5 /* Main.storyboard */,
@@ -301,6 +346,7 @@
 				F21FAA0F1DEEDD28007576F5 /* LaunchScreen.storyboard */,
 				F21FAA121DEEDD28007576F5 /* Info.plist */,
 				F2B1458F1DF7B08900798416 /* DRHistogramViewExample-Bridging-Header.h */,
+				6EFF1E1E1EEFBC250006A2E3 /* Supports */,
 				F2052FD51E88B8010068A97F /* Source */,
 			);
 			path = DRHistogramViewExample;
@@ -404,10 +450,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				F205303F1E88C3590068A97F /* WIFI3@2x.png in Resources */,
+				6EECE0A31EEF87E70014F6D9 /* upspeed@2x.png in Resources */,
+				6ED8ABBA1EFA79390001BEED /* cellular@2x.png in Resources */,
+				6ED8ABBC1EFA79390001BEED /* cellular@3x.png in Resources */,
+				6EECE0A91EEF87E70014F6D9 /* upspeed@3x.png in Resources */,
 				F20530361E88B8010068A97F /* Info.plist in Resources */,
+				6EECE0A51EEF87E70014F6D9 /* dspeed@3x.png in Resources */,
 				F28F61AC1E88F85700D333D4 /* WIFI2@2x.png in Resources */,
 				F22B732D1E88FB18001301F7 /* WIFI1@2x.png in Resources */,
 				F20E5F911DF53D0D0069088D /* MainInterface.storyboard in Resources */,
+				6EECE0A71EEF87E70014F6D9 /* dspeed@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,10 +468,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				F20530351E88B8010068A97F /* Info.plist in Resources */,
+				6EECE0A21EEF87E70014F6D9 /* upspeed@2x.png in Resources */,
+				6ED8ABB91EFA79390001BEED /* cellular@2x.png in Resources */,
+				6ED8ABBB1EFA79390001BEED /* cellular@3x.png in Resources */,
+				6EECE0A81EEF87E70014F6D9 /* upspeed@3x.png in Resources */,
 				F21FAA111DEEDD28007576F5 /* LaunchScreen.storyboard in Resources */,
+				6EECE0A41EEF87E70014F6D9 /* dspeed@3x.png in Resources */,
 				F205303E1E88C3590068A97F /* WIFI3@2x.png in Resources */,
 				F21FAA0E1DEEDD28007576F5 /* Assets.xcassets in Resources */,
 				F21FAA0C1DEEDD28007576F5 /* Main.storyboard in Resources */,
+				6EECE0A61EEF87E70014F6D9 /* dspeed@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +513,7 @@
 				F205302C1E88B8010068A97F /* ConstraintRelation.swift in Sources */,
 				F205301E1E88B8010068A97F /* ConstraintMakerPriortizable.swift in Sources */,
 				F20530181E88B8010068A97F /* ConstraintMakerEditable.swift in Sources */,
+				6E20E7201EEFC552007F2884 /* NetSpeedConvert.swift in Sources */,
 				F2052FFE1E88B8010068A97F /* ConstraintConfig.swift in Sources */,
 				F205300E1E88B8010068A97F /* ConstraintLayoutGuide.swift in Sources */,
 				F2052FFA1E88B8010068A97F /* Constraint.swift in Sources */,
@@ -466,7 +525,9 @@
 				F20530021E88B8010068A97F /* ConstraintDescription.swift in Sources */,
 				F205303C1E88B8010068A97F /* UILayoutSupport+Extensions.swift in Sources */,
 				F20530221E88B8010068A97F /* ConstraintMultiplierTarget.swift in Sources */,
+				6EFF1E171EEF9CEE0006A2E3 /* NetSpeedCaculate.m in Sources */,
 				F20530261E88B8010068A97F /* ConstraintPriority.swift in Sources */,
+				6EFF1E201EEFBC530006A2E3 /* Reachability.swift in Sources */,
 				F20530321E88B8010068A97F /* ConstraintViewDSL.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -502,10 +563,13 @@
 				F2B145921DF7B08A00798416 /* MemoryCaculate.m in Sources */,
 				F20530331E88B8010068A97F /* Debugging.swift in Sources */,
 				F20530271E88B8010068A97F /* ConstraintPriorityTarget.swift in Sources */,
+				6E20E71F1EEFC552007F2884 /* NetSpeedConvert.swift in Sources */,
 				F205302D1E88B8010068A97F /* ConstraintView+Extensions.swift in Sources */,
 				F205302B1E88B8010068A97F /* ConstraintRelation.swift in Sources */,
 				F20530131E88B8010068A97F /* ConstraintLayoutSupportDSL.swift in Sources */,
 				F21FAA071DEEDD28007576F5 /* AppDelegate.swift in Sources */,
+				6EFF1E161EEF9CEE0006A2E3 /* NetSpeedCaculate.m in Sources */,
+				6EFF1E211EEFBC540006A2E3 /* Reachability.swift in Sources */,
 				F20530251E88B8010068A97F /* ConstraintPriority.swift in Sources */,
 				F2B145961DF7E65E00798416 /* DiskSpaceCaculate.swift in Sources */,
 				F20530211E88B8010068A97F /* ConstraintMultiplierTarget.swift in Sources */,

@@ -21,13 +21,14 @@ class CurrentWIFIManager: NSObject {
         }
       }
     }
-    return ("未知", "未知")
+    return ("蜂窝移动网络", "未知")
   }
   
   func getSignalStrength() -> NSInteger {
     let app = UIApplication.shared
     let bar:NSObject = app.value(forKey: "statusBar") as! NSObject
-    if let view:UIView  = bar.value(forKey: "foregroundView") as? UIView {
+    
+    if let view:UIView  = bar.value(forKeyPath: "foregroundView") as? UIView {
       var dataNetworkItemView:NSObject = NSObject();
       
       

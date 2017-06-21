@@ -16,11 +16,28 @@ class TodayViewController: UIViewController, NCWidgetProviding {
   @IBOutlet weak var wifi: UIImageView!
   
   @IBOutlet weak var wifiLabel: UILabel!
+    
+  @IBOutlet weak var uploadSpeedLabel: UILabel!
+
+  @IBOutlet weak var downloadSpeedLabel: UILabel!
   
+  @IBOutlet weak var uploadSpeedIcon: UIImageView!
+  
+  @IBOutlet weak var downloadSpeedIcon: UIImageView!
+  
+  var wifi_s:Float = 0.0;
+  var wifi_r:Float = 0.0;
+  var wwan_s:Float = 0.0;
+  var wwan_r:Float = 0.0;
+  
+  var isWifi:Bool  = false
+  var isWwan:Bool  = false
   
   var i:CGFloat = 0.0
   let hi = DRHistogramView(frame: CGRect(x: 100, y: 10, width: 200, height: 50))
   let he = DRHistogramView(frame: CGRect(x: 100, y: 10, width: 200, height: 50))
+  let reachability = Reachability()!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
 
@@ -39,6 +56,27 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     he.direction       = .left
     he.frame           = CGRect(x: 17, y: 50, width: 162, height: 50)
     self.view.addSubview(he)
+    
+    reachability.whenReachable = { reachability in
+      DispatchQueue.main.async {
+        if reachability.isReachableViaWiFi {
+          print("WiFi连接")
+          self.isWifi = true
+          self.isWwan = false
+        }
+        else {
+          print("WWAN连接")
+          self.isWifi = false
+          self.isWwan = true
+        }
+      }
+    }
+    
+    do {
+      try reachability.startNotifier()
+    } catch {
+      fatalError("Unable to start notifier")
+    }
     
     // SnapKit约束
     he.snp.makeConstraints { (make) in
@@ -95,8 +133,39 @@ class TodayViewController: UIViewController, NCWidgetProviding {
       break;
     }
     
+    // wifi信息
     let wifiInfo = CurrentWIFIManager().getWIFIInfo()
+    if wifiInfo.ssid.compare("蜂窝移动网络") == ComparisonResult.orderedSame {
+        wifi.image = UIImage(named: "cellular");
+    }
     wifiLabel.text = wifiInfo.ssid
+    
+    // 网络上行下载速度
+    let datas:[NSNumber] = NetSpeedCaculate().getDataCounters() as! [NSNumber]
+    print("WIFISent:\(datas[0])\nWIFIReceive:\(datas[1])")
+    
+    if self.isWifi {
+      let wifis = datas[0].floatValue - self.wifi_s
+      let wifir = datas[1].floatValue - self.wifi_r
+      
+      self.uploadSpeedLabel.text = NetSpeedConvert().handleNetSpeed(value: wifis)
+      self.downloadSpeedLabel.text = NetSpeedConvert().handleNetSpeed(value: wifir)
+    }
+    else if self.isWwan {
+      let wwans = datas[2].floatValue - self.wwan_s
+      let wwanr = datas[3].floatValue - self.wwan_r
+      
+      self.uploadSpeedLabel.text = NetSpeedConvert().handleNetSpeed(value: wwans)
+      self.downloadSpeedLabel.text = NetSpeedConvert().handleNetSpeed(value: wwanr)
+    }
+    
+    
+    self.wifi_s = datas[0].floatValue
+    self.wifi_r = datas[1].floatValue
+    
+    self.wwan_s = datas[2].floatValue
+    self.wwan_r = datas[3].floatValue
+    
   }
   
   private func widgetPerformUpdate(completionHandler: ((NCUpdateResult) -> Void)) {
@@ -115,10 +184,18 @@ class TodayViewController: UIViewController, NCWidgetProviding {
       self.preferredContentSize = CGSize(width: UIScreen.main.bounds.size.width, height: 70)
       wifiLabel.isHidden = true
       wifi.isHidden      = true
+      uploadSpeedIcon.isHidden  = true
+      uploadSpeedLabel.isHidden = true
+      downloadSpeedIcon.isHidden  = true
+      downloadSpeedLabel.isHidden = true
     } else {
       self.preferredContentSize = CGSize(width: UIScreen.main.bounds.size.width, height: 150)
       wifiLabel.isHidden = false
       wifi.isHidden      = false
+      uploadSpeedIcon.isHidden  = false
+      uploadSpeedLabel.isHidden = false
+      downloadSpeedIcon.isHidden  = false
+      downloadSpeedLabel.isHidden = false
     }
     
   }
