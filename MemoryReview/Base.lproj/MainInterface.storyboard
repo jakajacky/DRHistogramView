@@ -28,8 +28,8 @@
                                     <constraint firstAttribute="height" constant="0.5" id="VJp-KH-c69"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XWa-gi-WsY">
-                                <rect key="frame" x="97" y="48" width="181" height="1"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XWa-gi-WsY">
+                                <rect key="frame" x="98" y="48" width="180" height="1"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="0.5" id="Kqz-qE-PAF"/>
@@ -162,14 +162,14 @@
                                     <constraint firstAttribute="width" constant="12" id="uGy-9g-auJ"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123B/s" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDj-fD-JSr">
-                                <rect key="frame" x="248.5" y="115.5" width="36" height="13.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0B/s" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDj-fD-JSr">
+                                <rect key="frame" x="248.5" y="115.5" width="24" height="13.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123B/s" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Edc-yS-SyB">
-                                <rect key="frame" x="248.5" y="132.5" width="36" height="13.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0B/s" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Edc-yS-SyB">
+                                <rect key="frame" x="248.5" y="132.5" width="24" height="13.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -244,10 +244,10 @@
                     <size key="freeformSize" width="375" height="150"/>
                     <connections>
                         <outlet property="downloadSpeedIcon" destination="dhC-KM-xWX" id="W3H-7u-3bk"/>
-                        <outlet property="downloadSpeedLabel" destination="Edc-yS-SyB" id="JY0-4m-YH9"/>
+                        <outlet property="downloadSpeedLabel" destination="Edc-yS-SyB" id="KJD-ip-Krv"/>
                         <outlet property="layoutAssitantor" destination="pPI-fR-9H3" id="vi9-qn-fpk"/>
                         <outlet property="uploadSpeedIcon" destination="CeG-Dp-U7b" id="tJ6-Wb-f4D"/>
-                        <outlet property="uploadSpeedLabel" destination="nDj-fD-JSr" id="wUB-Ub-qcG"/>
+                        <outlet property="uploadSpeedLabel" destination="nDj-fD-JSr" id="zth-hF-QoL"/>
                         <outlet property="wifi" destination="iX1-Im-hFb" id="X6J-Rq-a0N"/>
                         <outlet property="wifiLabel" destination="bBA-JP-Qlu" id="nRT-xe-4xc"/>
                     </connections>

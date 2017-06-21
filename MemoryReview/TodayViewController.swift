@@ -138,6 +138,9 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     if wifiInfo.ssid.compare("蜂窝移动网络") == ComparisonResult.orderedSame {
         wifi.image = UIImage(named: "cellular");
     }
+    else {
+        wifi.image = UIImage(named: "WIFI3");
+    }
     wifiLabel.text = wifiInfo.ssid
     
     // 网络上行下载速度
