@@ -67,16 +67,26 @@
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES"
       launchAutomaticallySubstyle = "2">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.springboard">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F21FAA021DEEDD28007576F5"
-            BuildableName = "DRHistogramViewExample.app"
-            BlueprintName = "DRHistogramViewExample"
+            BlueprintIdentifier = "F20E5F871DF53D0D0069088D"
+            BuildableName = "MemoryReview.appex"
+            BlueprintName = "MemoryReview"
             ReferencedContainer = "container:DRHistogramViewExample.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "F20E5F871DF53D0D0069088D"
+            BuildableName = "MemoryReview.appex"
+            BlueprintName = "MemoryReview"
+            ReferencedContainer = "container:DRHistogramViewExample.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

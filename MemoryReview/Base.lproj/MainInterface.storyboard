@@ -28,21 +28,21 @@
                                     <constraint firstAttribute="height" constant="0.5" id="VJp-KH-c69"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XWa-gi-WsY">
-                                <rect key="frame" x="98" y="48" width="180" height="1"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XWa-gi-WsY">
+                                <rect key="frame" x="97" y="48" width="181" height="1"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="0.5" id="Kqz-qE-PAF"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="内存占用" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPG-9c-wXT">
-                                <rect key="frame" x="37" y="8" width="61.5" height="26"/>
+                                <rect key="frame" x="41.5" y="8" width="61.5" height="26"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="剩余空间" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZz-sO-Cuq">
-                                <rect key="frame" x="276.5" y="8" width="61.5" height="26"/>
+                                <rect key="frame" x="272.5" y="8" width="61.5" height="26"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -193,11 +193,10 @@
                             <constraint firstItem="r6T-yg-cge" firstAttribute="leading" secondItem="bBA-JP-Qlu" secondAttribute="trailing" constant="7.5" id="Bxt-cl-kqP"/>
                             <constraint firstItem="ZfS-s2-EpR" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" id="C1s-Of-2Oh"/>
                             <constraint firstItem="pPI-fR-9H3" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="CGs-8V-JNO"/>
-                            <constraint firstItem="DPG-9c-wXT" firstAttribute="leading" secondItem="Ugw-PG-eDb" secondAttribute="leading" constant="20" id="CWt-5I-I6q"/>
                             <constraint firstItem="bBA-JP-Qlu" firstAttribute="width" relation="lessThanOrEqual" secondItem="XWa-gi-WsY" secondAttribute="width" id="DIF-u2-l4t"/>
                             <constraint firstItem="sIY-iH-qdE" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" id="DyV-Zh-5jT"/>
+                            <constraint firstItem="LZz-sO-Cuq" firstAttribute="leading" secondItem="XdL-lT-EJD" secondAttribute="trailing" constant="17" id="EJy-gy-qcx"/>
                             <constraint firstAttribute="bottom" secondItem="pPI-fR-9H3" secondAttribute="bottom" constant="4" id="EW2-aO-LOy"/>
-                            <constraint firstItem="LZz-sO-Cuq" firstAttribute="trailing" secondItem="Ugw-PG-eDb" secondAttribute="trailing" constant="-20" id="Enf-ki-fke"/>
                             <constraint firstItem="r6T-yg-cge" firstAttribute="top" secondItem="CeG-Dp-U7b" secondAttribute="bottom" constant="2" id="EyT-bh-z5Q"/>
                             <constraint firstItem="sIY-iH-qdE" firstAttribute="leading" secondItem="jN0-SN-8em" secondAttribute="trailing" constant="-2.5" id="GFF-FW-HSM"/>
                             <constraint firstItem="Ugw-PG-eDb" firstAttribute="top" secondItem="LZz-sO-Cuq" secondAttribute="bottom" constant="8" id="GfA-w4-f3K"/>
@@ -209,6 +208,7 @@
                             <constraint firstItem="r6T-yg-cge" firstAttribute="centerY" secondItem="iX1-Im-hFb" secondAttribute="centerY" id="KyB-Fy-v6i"/>
                             <constraint firstAttribute="trailing" secondItem="Ugw-PG-eDb" secondAttribute="trailing" constant="17" id="NmJ-B2-eaK"/>
                             <constraint firstItem="jN0-SN-8em" firstAttribute="centerY" secondItem="sIY-iH-qdE" secondAttribute="centerY" id="Qbk-MZ-J3M"/>
+                            <constraint firstItem="jN0-SN-8em" firstAttribute="leading" secondItem="DPG-9c-wXT" secondAttribute="trailing" constant="17" id="Qhf-Gt-2zx"/>
                             <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="iX1-Im-hFb" secondAttribute="bottom" constant="8" id="Sgx-7A-LJZ"/>
                             <constraint firstItem="fVb-f8-mR0" firstAttribute="leading" secondItem="Srd-f3-gBZ" secondAttribute="trailing" constant="-2.5" id="Sy1-mg-BNs"/>
                             <constraint firstItem="pPI-fR-9H3" firstAttribute="top" secondItem="S3S-Oj-5AN" secondAttribute="top" constant="51" id="UaA-65-f9i"/>
@@ -246,6 +246,7 @@
                         <outlet property="downloadSpeedIcon" destination="dhC-KM-xWX" id="W3H-7u-3bk"/>
                         <outlet property="downloadSpeedLabel" destination="Edc-yS-SyB" id="KJD-ip-Krv"/>
                         <outlet property="layoutAssitantor" destination="pPI-fR-9H3" id="vi9-qn-fpk"/>
+                        <outlet property="layoutAssitantorH" destination="Ugw-PG-eDb" id="KYw-tN-JSo"/>
                         <outlet property="uploadSpeedIcon" destination="CeG-Dp-U7b" id="tJ6-Wb-f4D"/>
                         <outlet property="uploadSpeedLabel" destination="nDj-fD-JSr" id="zth-hF-QoL"/>
                         <outlet property="wifi" destination="iX1-Im-hFb" id="X6J-Rq-a0N"/>

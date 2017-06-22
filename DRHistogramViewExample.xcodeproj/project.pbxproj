@@ -21,6 +21,8 @@
 		6EECE0A71EEF87E70014F6D9 /* dspeed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EECE0A01EEF87E70014F6D9 /* dspeed@2x.png */; };
 		6EECE0A81EEF87E70014F6D9 /* upspeed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EECE0A11EEF87E70014F6D9 /* upspeed@3x.png */; };
 		6EECE0A91EEF87E70014F6D9 /* upspeed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EECE0A11EEF87E70014F6D9 /* upspeed@3x.png */; };
+		6EF378331EFB6FE60004BC09 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF378321EFB6FE60004BC09 /* ReachabilityManager.swift */; };
+		6EF378341EFB6FE60004BC09 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF378321EFB6FE60004BC09 /* ReachabilityManager.swift */; };
 		6EFF1E161EEF9CEE0006A2E3 /* NetSpeedCaculate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EFF1E151EEF9CEE0006A2E3 /* NetSpeedCaculate.m */; };
 		6EFF1E171EEF9CEE0006A2E3 /* NetSpeedCaculate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EFF1E151EEF9CEE0006A2E3 /* NetSpeedCaculate.m */; };
 		6EFF1E201EEFBC530006A2E3 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFF1E1F1EEFBC340006A2E3 /* Reachability.swift */; };
@@ -148,6 +150,7 @@
 		6EECE09F1EEF87E70014F6D9 /* dspeed@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dspeed@3x.png"; sourceTree = "<group>"; };
 		6EECE0A01EEF87E70014F6D9 /* dspeed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dspeed@2x.png"; sourceTree = "<group>"; };
 		6EECE0A11EEF87E70014F6D9 /* upspeed@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "upspeed@3x.png"; sourceTree = "<group>"; };
+		6EF378321EFB6FE60004BC09 /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
 		6EFF1E141EEF9CEE0006A2E3 /* NetSpeedCaculate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetSpeedCaculate.h; sourceTree = "<group>"; };
 		6EFF1E151EEF9CEE0006A2E3 /* NetSpeedCaculate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetSpeedCaculate.m; sourceTree = "<group>"; };
 		6EFF1E1F1EEFBC340006A2E3 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
@@ -341,6 +344,7 @@
 				6EFF1E151EEF9CEE0006A2E3 /* NetSpeedCaculate.m */,
 				F2B145951DF7E65D00798416 /* DiskSpaceCaculate.swift */,
 				F28F61A41E88C54400D333D4 /* CurrentWIFIManager.swift */,
+				6EF378321EFB6FE60004BC09 /* ReachabilityManager.swift */,
 				F21FAA0A1DEEDD28007576F5 /* Main.storyboard */,
 				F21FAA0D1DEEDD28007576F5 /* Assets.xcassets */,
 				F21FAA0F1DEEDD28007576F5 /* LaunchScreen.storyboard */,
@@ -504,6 +508,7 @@
 				F2052FFC1E88B8010068A97F /* ConstraintAttributes.swift in Sources */,
 				F20530341E88B8010068A97F /* Debugging.swift in Sources */,
 				F20530041E88B8010068A97F /* ConstraintDSL.swift in Sources */,
+				6EF378341EFB6FE60004BC09 /* ReachabilityManager.swift in Sources */,
 				F205302E1E88B8010068A97F /* ConstraintView+Extensions.swift in Sources */,
 				F20530141E88B8010068A97F /* ConstraintLayoutSupportDSL.swift in Sources */,
 				F28F61A61E88C54400D333D4 /* CurrentWIFIManager.swift in Sources */,
@@ -576,6 +581,7 @@
 				F205301F1E88B8010068A97F /* ConstraintMakerRelatable.swift in Sources */,
 				F20530371E88B8010068A97F /* LayoutConstraint.swift in Sources */,
 				F205301B1E88B8010068A97F /* ConstraintMakerFinalizable.swift in Sources */,
+				6EF378331EFB6FE60004BC09 /* ReachabilityManager.swift in Sources */,
 				F20530291E88B8010068A97F /* ConstraintRelatableTarget.swift in Sources */,
 				F20530011E88B8010068A97F /* ConstraintDescription.swift in Sources */,
 			);

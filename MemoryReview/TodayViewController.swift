@@ -11,6 +11,9 @@ import NotificationCenter
 
 class TodayViewController: UIViewController, NCWidgetProviding {
   
+  
+  @IBOutlet weak var layoutAssitantorH: UIView!
+  
   @IBOutlet weak var layoutAssitantor: UIView!
   
   @IBOutlet weak var wifi: UIImageView!
@@ -34,8 +37,8 @@ class TodayViewController: UIViewController, NCWidgetProviding {
   var isWwan:Bool  = false
   
   var i:CGFloat = 0.0
-  let hi = DRHistogramView(frame: CGRect(x: 100, y: 10, width: 200, height: 50))
-  let he = DRHistogramView(frame: CGRect(x: 100, y: 10, width: 200, height: 50))
+  let hi = DRHistogramView()
+  let he = DRHistogramView()
   let reachability = Reachability()!
   
   override func viewDidLoad() {
@@ -58,6 +61,73 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     self.view.addSubview(he)
     
     reachability.whenReachable = { reachability in
+        DispatchQueue.main.async {
+            if reachability.isReachableViaWiFi {
+                print("WiFi连接")
+                self.isWifi = true
+                self.isWwan = false
+            }
+            else {
+                print("WWAN连接")
+                self.isWifi = false
+                self.isWwan = true
+            }
+        }
+    }
+    
+    do {
+      try reachability.startNotifier()
+    } catch {
+      fatalError("Unable to start notifier")
+    }
+    
+    // SnapKit约束 7s 414  7 375  5s 320  10.5 522  12.9 638 9.7 522
+    if UIDevice.current.model.compare("iPad") == ComparisonResult.orderedSame {
+      var rate = 522.0
+      if self.view.frame.width>=1024 {
+        rate = 638.0
+      }
+      he.snp.makeConstraints { (make) in
+        make.width.equalTo(rate*0.5)
+        make.height.equalTo(50)
+        make.top.equalTo(50)
+        make.right.equalTo(layoutAssitantor.snp.left).offset(-0.5)
+      }
+      
+      hi.snp.makeConstraints { (make) in
+        make.width.equalTo(rate*0.5)
+        make.height.equalTo(50)
+        make.top.equalTo(50)
+        make.left.equalTo(layoutAssitantor.snp.right).offset(0.5)
+      }
+    }
+    else {
+      he.snp.makeConstraints { (make) in
+        make.width.equalTo(self.view.frame.width*0.432)
+        make.height.equalTo(50)
+        make.top.equalTo(50)
+        make.right.equalTo(layoutAssitantor.snp.left).offset(-0.5)
+      }
+
+      hi.snp.makeConstraints { (make) in
+        make.width.equalTo(self.view.frame.width*0.432)
+        make.height.equalTo(50)
+        make.top.equalTo(50)
+        make.left.equalTo(layoutAssitantor.snp.right).offset(0.5)
+      }
+    }
+    
+    
+    let timer = Timer(timeInterval: 1, target: self, selector: #selector(time), userInfo: nil, repeats: true)
+    let run = RunLoop.current
+    run.add(timer, forMode: RunLoopMode.commonModes)
+    timer.fire()
+  }
+  
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    print("\(layoutAssitantorH.frame)")
+    reachability.whenReachable = { reachability in
       DispatchQueue.main.async {
         if reachability.isReachableViaWiFi {
           print("WiFi连接")
@@ -78,26 +148,11 @@ class TodayViewController: UIViewController, NCWidgetProviding {
       fatalError("Unable to start notifier")
     }
     
-    // SnapKit约束
-    he.snp.makeConstraints { (make) in
-      make.width.equalTo(162)
-      make.height.equalTo(50)
-      make.top.equalTo(50)
-      make.right.equalTo(layoutAssitantor.snp.left).offset(-0.5)
-    }
-    
-    hi.snp.makeConstraints { (make) in
-      make.width.equalTo(162)
-      make.height.equalTo(50)
-      make.top.equalTo(50)
-      make.left.equalTo(layoutAssitantor.snp.right).offset(0.5)
-    }
-    
-    
-    let timer = Timer(timeInterval: 1, target: self, selector: #selector(time), userInfo: nil, repeats: true)
-    let run = RunLoop.current
-    run.add(timer, forMode: RunLoopMode.commonModes)
-    timer.fire()
+  }
+  
+  override func viewDidDisappear(_ animated: Bool) {
+    super.viewDidDisappear(animated)
+    reachability.stopNotifier()
   }
   
   override func didReceiveMemoryWarning() {
@@ -106,6 +161,21 @@ class TodayViewController: UIViewController, NCWidgetProviding {
   }
   
   @objc func time() {
+    
+    switch reachability.currentReachabilityStatus {
+    case .reachableViaWiFi:
+      self.isWifi = true
+      self.isWwan = false
+      break
+    case .reachableViaWWAN:
+      self.isWifi = false
+      self.isWwan = true
+      break
+    default:
+      break
+    }
+    
+    
     i += 10
     
     let mem = MemoryCaculate()
@@ -165,9 +235,13 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     if wifiInfo.ssid.compare("蜂窝移动网络") == ComparisonResult.orderedSame {
         wifi.image = UIImage(named: "cellular");
+      self.isWwan = true
+      self.isWifi = false
     }
     else {
         wifi.image = UIImage(named: "WIFI3");
+      self.isWwan = false
+      self.isWifi = true
     }
     
   }
@@ -188,16 +262,24 @@ class TodayViewController: UIViewController, NCWidgetProviding {
       self.preferredContentSize = CGSize(width: UIScreen.main.bounds.size.width, height: 70)
       wifiLabel.isHidden = true
       wifi.isHidden      = true
-      uploadSpeedIcon.isHidden  = true
-      uploadSpeedLabel.isHidden = true
+      uploadSpeedIcon.isHidden    = true
+      uploadSpeedLabel.isHidden   = true
+      downloadSpeedIcon.isHidden  = true
+      downloadSpeedLabel.isHidden = true
+      uploadSpeedIcon.isHidden    = true
+      uploadSpeedLabel.isHidden   = true
       downloadSpeedIcon.isHidden  = true
       downloadSpeedLabel.isHidden = true
     } else {
       self.preferredContentSize = CGSize(width: UIScreen.main.bounds.size.width, height: 150)
       wifiLabel.isHidden = false
       wifi.isHidden      = false
-      uploadSpeedIcon.isHidden  = false
-      uploadSpeedLabel.isHidden = false
+      uploadSpeedIcon.isHidden    = false
+      uploadSpeedLabel.isHidden   = false
+      downloadSpeedIcon.isHidden  = false
+      downloadSpeedLabel.isHidden = false
+      uploadSpeedIcon.isHidden    = false
+      uploadSpeedLabel.isHidden   = false
       downloadSpeedIcon.isHidden  = false
       downloadSpeedLabel.isHidden = false
     }
