@@ -49,7 +49,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     hi.backgroundColor = UIColor.clear
     hi.histogramColor  = UIColor(red: 34/255.0, green: 111/255.0, blue: 224/255.0, alpha: 1)
     hi.proportion      = 0
-    hi.showWithNumber  = true
+//    hi.showWithNumber  = true
     hi.frame           = CGRect(x: 181, y: 50, width: 162, height: 50)
     self.view.addSubview(hi)
     
@@ -185,7 +185,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     let s:CGFloat = space.getDiskspace()
     let total:CGFloat = space.getTotalDiskspace()
     
-    hi.proportion = total - s + 2.3
+    hi.proportion = (s-2.3)/total * 162.0
     he.proportion = (2048 - m) / 2048.0 * 162.0
     
     switch CurrentWIFIManager().getSignalStrength() {

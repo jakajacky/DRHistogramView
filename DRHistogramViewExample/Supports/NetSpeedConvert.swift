@@ -24,4 +24,14 @@ class NetSpeedConvert: NSObject {
     return String(format: "%.1f%@", speed,unit_s)
   }
   
+  class func handleMemory(value:Float) -> String {
+    var mem = value
+    var unit_s = "M"
+    if mem >= 1024.0 {
+      unit_s = "G"
+      mem = mem/1024.0
+    }
+    return String(format: "%.1f%@", mem,unit_s)
+  }
+  
 }
