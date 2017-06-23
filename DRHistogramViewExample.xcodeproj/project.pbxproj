@@ -21,6 +21,14 @@
 		6E766CFF1EFCE09500C62CED /* NetSpeedCaculate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E766CF11EFCE06B00C62CED /* NetSpeedCaculate.m */; };
 		6E766D001EFCE09800C62CED /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E766CEE1EFCE06B00C62CED /* ReachabilityManager.swift */; };
 		6E766D011EFCE09800C62CED /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E766CEE1EFCE06B00C62CED /* ReachabilityManager.swift */; };
+		6E869CDA1EFD308300D728F8 /* set_down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E869CD71EFD307C00D728F8 /* set_down@2x.png */; };
+		6E869CDB1EFD308300D728F8 /* set_down@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E869CD61EFD307C00D728F8 /* set_down@3x.png */; };
+		6E869CDC1EFD308300D728F8 /* set_up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E869CD91EFD307C00D728F8 /* set_up@2x.png */; };
+		6E869CDD1EFD308300D728F8 /* set_up@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E869CD81EFD307C00D728F8 /* set_up@3x.png */; };
+		6E869CDE1EFD308300D728F8 /* set_down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E869CD71EFD307C00D728F8 /* set_down@2x.png */; };
+		6E869CDF1EFD308300D728F8 /* set_down@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E869CD61EFD307C00D728F8 /* set_down@3x.png */; };
+		6E869CE01EFD308300D728F8 /* set_up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E869CD91EFD307C00D728F8 /* set_up@2x.png */; };
+		6E869CE11EFD308300D728F8 /* set_up@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E869CD81EFD307C00D728F8 /* set_up@3x.png */; };
 		6E92722C1EFCEAC700C54682 /* BgProgressViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E92722B1EFCEAC700C54682 /* BgProgressViewCell.swift */; };
 		6E9272351EFD031400C54682 /* set_wifi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E9272341EFD031000C54682 /* set_wifi@2x.png */; };
 		6E9272361EFD031400C54682 /* set_wifi@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E9272331EFD031000C54682 /* set_wifi@3x.png */; };
@@ -165,6 +173,10 @@
 		6E766CF31EFCE06B00C62CED /* MemoryCaculate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoryCaculate.m; sourceTree = "<group>"; };
 		6E766CF41EFCE06B00C62CED /* DRHistogramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRHistogramView.swift; sourceTree = "<group>"; };
 		6E766CF51EFCE06B00C62CED /* NetSpeedCaculate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetSpeedCaculate.h; sourceTree = "<group>"; };
+		6E869CD61EFD307C00D728F8 /* set_down@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "set_down@3x.png"; sourceTree = "<group>"; };
+		6E869CD71EFD307C00D728F8 /* set_down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "set_down@2x.png"; sourceTree = "<group>"; };
+		6E869CD81EFD307C00D728F8 /* set_up@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "set_up@3x.png"; sourceTree = "<group>"; };
+		6E869CD91EFD307C00D728F8 /* set_up@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "set_up@2x.png"; sourceTree = "<group>"; };
 		6E92722B1EFCEAC700C54682 /* BgProgressViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BgProgressViewCell.swift; sourceTree = "<group>"; };
 		6E9272331EFD031000C54682 /* set_wifi@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "set_wifi@3x.png"; sourceTree = "<group>"; };
 		6E9272341EFD031000C54682 /* set_wifi@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "set_wifi@2x.png"; sourceTree = "<group>"; };
@@ -256,6 +268,10 @@
 		6E9272321EFD02FB00C54682 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				6E869CD71EFD307C00D728F8 /* set_down@2x.png */,
+				6E869CD61EFD307C00D728F8 /* set_down@3x.png */,
+				6E869CD91EFD307C00D728F8 /* set_up@2x.png */,
+				6E869CD81EFD307C00D728F8 /* set_up@3x.png */,
 				6E92724C1EFD0CB900C54682 /* set_mem@2x.png */,
 				6E92724B1EFD0CB900C54682 /* set_mem@3x.png */,
 				6E92723F1EFD05C000C54682 /* set_ram@2x.png */,
@@ -493,7 +509,9 @@
 				6E9272381EFD031500C54682 /* set_wifi@3x.png in Resources */,
 				F205303F1E88C3590068A97F /* WIFI3@2x.png in Resources */,
 				6EECE0A31EEF87E70014F6D9 /* upspeed@2x.png in Resources */,
+				6E869CDE1EFD308300D728F8 /* set_down@2x.png in Resources */,
 				6E92724D1EFD0CBD00C54682 /* set_mem@2x.png in Resources */,
+				6E869CE11EFD308300D728F8 /* set_up@3x.png in Resources */,
 				6E92724E1EFD0CBD00C54682 /* set_mem@3x.png in Resources */,
 				6ED8ABBA1EFA79390001BEED /* cellular@2x.png in Resources */,
 				6ED8ABBC1EFA79390001BEED /* cellular@3x.png in Resources */,
@@ -501,6 +519,8 @@
 				F20530361E88B8010068A97F /* Info.plist in Resources */,
 				6EECE0A51EEF87E70014F6D9 /* dspeed@3x.png in Resources */,
 				F28F61AC1E88F85700D333D4 /* WIFI2@2x.png in Resources */,
+				6E869CE01EFD308300D728F8 /* set_up@2x.png in Resources */,
+				6E869CDF1EFD308300D728F8 /* set_down@3x.png in Resources */,
 				F22B732D1E88FB18001301F7 /* WIFI1@2x.png in Resources */,
 				F20E5F911DF53D0D0069088D /* MainInterface.storyboard in Resources */,
 				6E9272371EFD031500C54682 /* set_wifi@2x.png in Resources */,
@@ -517,7 +537,9 @@
 				6E9272361EFD031400C54682 /* set_wifi@3x.png in Resources */,
 				F20530351E88B8010068A97F /* Info.plist in Resources */,
 				6EECE0A21EEF87E70014F6D9 /* upspeed@2x.png in Resources */,
+				6E869CDA1EFD308300D728F8 /* set_down@2x.png in Resources */,
 				6E92724F1EFD0CBD00C54682 /* set_mem@2x.png in Resources */,
+				6E869CDD1EFD308300D728F8 /* set_up@3x.png in Resources */,
 				6E9272501EFD0CBD00C54682 /* set_mem@3x.png in Resources */,
 				6ED8ABB91EFA79390001BEED /* cellular@2x.png in Resources */,
 				6ED8ABBB1EFA79390001BEED /* cellular@3x.png in Resources */,
@@ -525,6 +547,8 @@
 				F21FAA111DEEDD28007576F5 /* LaunchScreen.storyboard in Resources */,
 				6EECE0A41EEF87E70014F6D9 /* dspeed@3x.png in Resources */,
 				F205303E1E88C3590068A97F /* WIFI3@2x.png in Resources */,
+				6E869CDC1EFD308300D728F8 /* set_up@2x.png in Resources */,
+				6E869CDB1EFD308300D728F8 /* set_down@3x.png in Resources */,
 				F21FAA0E1DEEDD28007576F5 /* Assets.xcassets in Resources */,
 				F21FAA0C1DEEDD28007576F5 /* Main.storyboard in Resources */,
 				6E9272351EFD031400C54682 /* set_wifi@2x.png in Resources */,

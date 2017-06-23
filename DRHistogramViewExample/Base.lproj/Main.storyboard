@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vH5-Ny-yfr">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,7 +9,23 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="tZs-Cu-Wvy">
+            <objects>
+                <navigationController id="vH5-Ny-yfr" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YIm-iO-sDi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="e0N-Pv-yEe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B6e-kg-Fuq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-714" y="139"/>
+        </scene>
+        <!--REVIEW-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DRHistogramViewExample" customModuleProvider="target" sceneMemberID="viewController">
@@ -22,7 +38,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="nop-hZ-xf4">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <sections/>
                                 <connections>
@@ -36,9 +52,10 @@
                             <constraint firstAttribute="trailing" secondItem="nop-hZ-xf4" secondAttribute="trailing" id="4SO-Ic-Zt1"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nop-hZ-xf4" secondAttribute="bottom" id="I4F-Pv-Zsq"/>
                             <constraint firstItem="nop-hZ-xf4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="q5f-l4-YT1"/>
-                            <constraint firstItem="nop-hZ-xf4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="uxg-9W-2BR"/>
+                            <constraint firstItem="nop-hZ-xf4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="uxg-9W-2BR"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="REVIEW" id="5ts-3c-iFL"/>
                     <connections>
                         <outlet property="table" destination="nop-hZ-xf4" id="Akr-xT-Lca"/>
                     </connections>

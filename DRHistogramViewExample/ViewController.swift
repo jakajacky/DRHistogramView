@@ -24,6 +24,12 @@ class ViewController: UIViewController {
   var s:CGFloat = 0.0
   var total:CGFloat = 0.0
   var wifiInfo:(ssid:String,mac:String)!
+  var datas:[NSNumber]!
+  
+  var wifis:Float = 0.0
+  var wifir:Float = 0.0
+  var wwans:Float = 0.0
+  var wwanr:Float = 0.0
   
   @IBOutlet weak var table: UITableView!
   
@@ -117,24 +123,17 @@ class ViewController: UIViewController {
     // wifi信息
     wifiInfo = CurrentWIFIManager().getWIFIInfo()
     
-    
     // 网络上行下载速度
-    let datas:[NSNumber] = NetSpeedCaculate().getDataCounters() as! [NSNumber]
+    datas = NetSpeedCaculate().getDataCounters() as! [NSNumber]
     print("WIFISent:\(datas[0])\nWIFIReceive:\(datas[1])")
     
     if self.isWifi {
-      let wifis = datas[0].floatValue - self.wifi_s
-      let wifir = datas[1].floatValue - self.wifi_r
-      
-//      self.uploadSpeedLabel.text = NetSpeedConvert().handleNetSpeed(value: wifis)
-//      self.downloadSpeedLabel.text = NetSpeedConvert().handleNetSpeed(value: wifir)
+      wifis = datas[0].floatValue - self.wifi_s
+      wifir = datas[1].floatValue - self.wifi_r
     }
     else if self.isWwan {
-      let wwans = datas[2].floatValue - self.wwan_s
-      let wwanr = datas[3].floatValue - self.wwan_r
-      
-//      self.uploadSpeedLabel.text = NetSpeedConvert().handleNetSpeed(value: wwans)
-//      self.downloadSpeedLabel.text = NetSpeedConvert().handleNetSpeed(value: wwanr)
+      wwans = datas[2].floatValue - self.wwan_s
+      wwanr = datas[3].floatValue - self.wwan_r
     }
     
     
@@ -182,7 +181,7 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource {
   func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
     switch section {
     case 0:
-      return "REVIEW"
+      return "MEMORY"
     case 1:
       return "WIFI"
     case 2:
@@ -194,7 +193,7 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource {
   
   @available(iOS 2.0, *)
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    if indexPath.section==0 {
+    if indexPath.section == 0 {
       var cell = tableView.dequeueReusableCell(withIdentifier: "review") as? BgProgressViewCell
       if cell==nil {
         cell = BgProgressViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "review")
@@ -213,16 +212,55 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource {
         cell?.color = UIColor(red: 18/255.0, green: 150/255.0, blue: 219/255.0, alpha: 0.8).cgColor
         cell?.progress = (s-2.3)/total
       }
+      cell?.selectionStyle = .none
+      return cell!;
+    }
+    else if indexPath.section == 1 {
+      var cell = tableView.dequeueReusableCell(withIdentifier: "review") as? BgProgressViewCell
+      if cell==nil {
+        cell = BgProgressViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "review")
+      }
+      cell?.titleLable.text = "无线局域网"
+      cell?.iconView.image  = UIImage(named: "set_wifi")
+      cell?.descriptionLabel.text = wifiInfo.ssid
+      cell?.selectionStyle = .none
       return cell!;
     }
     else {
-      var cell = tableView.dequeueReusableCell(withIdentifier: "cell")
+      var cell = tableView.dequeueReusableCell(withIdentifier: "review") as? BgProgressViewCell
       if cell==nil {
-        cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
+        cell = BgProgressViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "review")
       }
-//      cell?.titleLable.text = "\(indexPath.section)-\(indexPath.row)"
-//      cell?.iconView.image  = UIImage(named: "set_wifi")
-//      cell?.descriptionLabel.text = "\(indexPath.section)-\(indexPath.row)"
+      
+      if self.isWifi {
+        
+        if indexPath.row == 0 {
+          cell?.titleLable.text = "上行速度"
+          cell?.iconView.image  = UIImage(named: "set_up")
+          cell?.descriptionLabel.text = NetSpeedConvert().handleNetSpeed(value: wifis)
+        }
+        else {
+          cell?.titleLable.text = "下行速度"
+          cell?.iconView.image  = UIImage(named: "set_down")
+          cell?.descriptionLabel.text = NetSpeedConvert().handleNetSpeed(value: wifir)
+        }
+      }
+      else if self.isWwan {
+        
+        if indexPath.row == 0 {
+          cell?.titleLable.text = "上行速度"
+          cell?.iconView.image  = UIImage(named: "set_up")
+          cell?.descriptionLabel.text = NetSpeedConvert().handleNetSpeed(value: wwans)
+        }
+        else {
+          cell?.titleLable.text = "下行速度"
+          cell?.iconView.image  = UIImage(named: "set_down")
+          cell?.descriptionLabel.text = NetSpeedConvert().handleNetSpeed(value: wwanr)
+        }
+      }
+      
+      
+      cell?.selectionStyle = .none
       return cell!;
     }
   }
