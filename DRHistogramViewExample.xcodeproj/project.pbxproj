@@ -54,6 +54,10 @@
 		6EECE0A71EEF87E70014F6D9 /* dspeed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EECE0A01EEF87E70014F6D9 /* dspeed@2x.png */; };
 		6EECE0A81EEF87E70014F6D9 /* upspeed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EECE0A11EEF87E70014F6D9 /* upspeed@3x.png */; };
 		6EECE0A91EEF87E70014F6D9 /* upspeed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EECE0A11EEF87E70014F6D9 /* upspeed@3x.png */; };
+		6EFAFAE31F009FB200F6BE0F /* set_celluar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EFAFAE21F009ED600F6BE0F /* set_celluar@2x.png */; };
+		6EFAFAE41F009FB200F6BE0F /* set_celluar@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EFAFAE11F009ED600F6BE0F /* set_celluar@3x.png */; };
+		6EFAFAE51F009FB300F6BE0F /* set_celluar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EFAFAE21F009ED600F6BE0F /* set_celluar@2x.png */; };
+		6EFAFAE61F009FB300F6BE0F /* set_celluar@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EFAFAE11F009ED600F6BE0F /* set_celluar@3x.png */; };
 		6EFF1E201EEFBC530006A2E3 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFF1E1F1EEFBC340006A2E3 /* Reachability.swift */; };
 		6EFF1E211EEFBC540006A2E3 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFF1E1F1EEFBC340006A2E3 /* Reachability.swift */; };
 		F2052FF91E88B8010068A97F /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2052FD61E88B8010068A97F /* Constraint.swift */; };
@@ -190,6 +194,8 @@
 		6EECE09F1EEF87E70014F6D9 /* dspeed@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dspeed@3x.png"; sourceTree = "<group>"; };
 		6EECE0A01EEF87E70014F6D9 /* dspeed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dspeed@2x.png"; sourceTree = "<group>"; };
 		6EECE0A11EEF87E70014F6D9 /* upspeed@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "upspeed@3x.png"; sourceTree = "<group>"; };
+		6EFAFAE11F009ED600F6BE0F /* set_celluar@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "set_celluar@3x.png"; sourceTree = "<group>"; };
+		6EFAFAE21F009ED600F6BE0F /* set_celluar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "set_celluar@2x.png"; sourceTree = "<group>"; };
 		6EFF1E1F1EEFBC340006A2E3 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		F2052FD61E88B8010068A97F /* Constraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constraint.swift; sourceTree = "<group>"; };
 		F2052FD71E88B8010068A97F /* ConstraintAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintAttributes.swift; sourceTree = "<group>"; };
@@ -278,6 +284,8 @@
 				6E9272401EFD05C000C54682 /* set_ram@3x.png */,
 				6E9272341EFD031000C54682 /* set_wifi@2x.png */,
 				6E9272331EFD031000C54682 /* set_wifi@3x.png */,
+				6EFAFAE21F009ED600F6BE0F /* set_celluar@2x.png */,
+				6EFAFAE11F009ED600F6BE0F /* set_celluar@3x.png */,
 			);
 			path = image;
 			sourceTree = "<group>";
@@ -520,6 +528,8 @@
 				6EECE0A51EEF87E70014F6D9 /* dspeed@3x.png in Resources */,
 				F28F61AC1E88F85700D333D4 /* WIFI2@2x.png in Resources */,
 				6E869CE01EFD308300D728F8 /* set_up@2x.png in Resources */,
+				6EFAFAE41F009FB200F6BE0F /* set_celluar@3x.png in Resources */,
+				6EFAFAE31F009FB200F6BE0F /* set_celluar@2x.png in Resources */,
 				6E869CDF1EFD308300D728F8 /* set_down@3x.png in Resources */,
 				F22B732D1E88FB18001301F7 /* WIFI1@2x.png in Resources */,
 				F20E5F911DF53D0D0069088D /* MainInterface.storyboard in Resources */,
@@ -548,6 +558,8 @@
 				6EECE0A41EEF87E70014F6D9 /* dspeed@3x.png in Resources */,
 				F205303E1E88C3590068A97F /* WIFI3@2x.png in Resources */,
 				6E869CDC1EFD308300D728F8 /* set_up@2x.png in Resources */,
+				6EFAFAE61F009FB300F6BE0F /* set_celluar@3x.png in Resources */,
+				6EFAFAE51F009FB300F6BE0F /* set_celluar@2x.png in Resources */,
 				6E869CDB1EFD308300D728F8 /* set_down@3x.png in Resources */,
 				F21FAA0E1DEEDD28007576F5 /* Assets.xcassets in Resources */,
 				F21FAA0C1DEEDD28007576F5 /* Main.storyboard in Resources */,

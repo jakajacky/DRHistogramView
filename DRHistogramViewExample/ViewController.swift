@@ -183,7 +183,7 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource {
     case 0:
       return "MEMORY"
     case 1:
-      return "WIFI"
+      return "NETWORK"
     case 2:
       return "SPEED"
     default:
@@ -220,8 +220,8 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource {
       if cell==nil {
         cell = BgProgressViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "review")
       }
-      cell?.titleLable.text = "无线局域网"
-      cell?.iconView.image  = UIImage(named: "set_wifi")
+      cell?.titleLable.text = "当前网络"
+      cell?.iconView.image  = self.isWifi ? UIImage(named: "set_wifi") : UIImage(named: "set_celluar")
       cell?.descriptionLabel.text = wifiInfo.ssid
       cell?.selectionStyle = .none
       return cell!;
