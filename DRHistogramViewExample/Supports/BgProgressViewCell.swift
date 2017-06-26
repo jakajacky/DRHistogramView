@@ -20,13 +20,10 @@ class BgProgressViewCell: UITableViewCell {
     didSet {
       if color == UIColor(red: 50/255.0, green: 213/255.0, blue: 80/255.0, alpha: 0.7).cgColor {
         bgGradientLayer.colors = [UIColor.white.cgColor,UIColor(red: 50/255.0, green: 242/255.0, blue: 80/255.0, alpha: 0.7).cgColor,color]
-//        bgGradientLayer.colors = [UIColor.white.cgColor,UIColor(red: 50/255.0, green: 242/255.0, blue: 80/255.0, alpha: 0.8).cgColor,color,UIColor(red: 50/255.0, green: 242/255.0, blue: 80/255.0, alpha: 0.8).cgColor,UIColor.white.cgColor]
       }
       else {
         bgGradientLayer.colors = [UIColor.white.cgColor,UIColor(red: 18/255.0, green: 183/255.0, blue: 219/255.0, alpha: 0.7).cgColor,color]
-//        bgGradientLayer.colors = [UIColor.white.cgColor,UIColor(red: 18/255.0, green: 183/255.0, blue: 219/255.0, alpha: 0.8).cgColor,color,UIColor(red: 18/255.0, green: 183/255.0, blue: 219/255.0, alpha: 0.8).cgColor,UIColor.white.cgColor]
       }
-      
     }
   }
   
