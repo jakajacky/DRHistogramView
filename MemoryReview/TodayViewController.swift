@@ -214,16 +214,22 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     if self.isWifi {
       let wifis = datas[0].floatValue - self.wifi_s
       let wifir = datas[1].floatValue - self.wifi_r
-      
-      self.uploadSpeedLabel.text = NetSpeedConvert().handleNetSpeed(value: wifis)
-      self.downloadSpeedLabel.text = NetSpeedConvert().handleNetSpeed(value: wifir)
+      if self.wifi_s != 0.0 {
+        self.uploadSpeedLabel.text = NetSpeedConvert().handleNetSpeed(value: wifis)
+      }
+      if self.wifi_r != 0.0 {
+        self.downloadSpeedLabel.text = NetSpeedConvert().handleNetSpeed(value: wifir)
+      }
     }
     else if self.isWwan {
       let wwans = datas[2].floatValue - self.wwan_s
       let wwanr = datas[3].floatValue - self.wwan_r
-      
-      self.uploadSpeedLabel.text = NetSpeedConvert().handleNetSpeed(value: wwans)
-      self.downloadSpeedLabel.text = NetSpeedConvert().handleNetSpeed(value: wwanr)
+      if self.wwan_s != 0.0 {
+        self.uploadSpeedLabel.text = NetSpeedConvert().handleNetSpeed(value: wwans)
+      }
+      if self.wwan_r != 0.0 {
+        self.downloadSpeedLabel.text = NetSpeedConvert().handleNetSpeed(value: wwanr)
+      }
     }
     
     
