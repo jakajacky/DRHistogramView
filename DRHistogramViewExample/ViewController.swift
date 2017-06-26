@@ -202,14 +202,14 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource {
         cell?.titleLable.text = "内存占用"
         cell?.iconView.image  = UIImage(named: "set_ram")
         cell?.descriptionLabel.text = NSString(format: "%@\\2G", NetSpeedConvert.handleMemory(value: Float(2048 - m))) as String //""
-        cell?.color = UIColor(red: 50/255.0, green: 213/255.0, blue: 80/255.0, alpha: 0.8).cgColor
+        cell?.color = UIColor(red: 50/255.0, green: 213/255.0, blue: 80/255.0, alpha: 0.7).cgColor
         cell?.progress = (2048 - m) / 2048.0
       }
       else {
         cell?.titleLable.text = "空间占用"
         cell?.iconView.image  = UIImage(named: "set_mem")
         cell?.descriptionLabel.text = NSString(format: "%.1fG\\%.fG", s-2.3,total) as String //""
-        cell?.color = UIColor(red: 18/255.0, green: 150/255.0, blue: 219/255.0, alpha: 0.8).cgColor
+        cell?.color = UIColor(red: 18/255.0, green: 150/255.0, blue: 219/255.0, alpha: 0.7).cgColor
         cell?.progress = (s-2.3)/total
       }
       cell?.selectionStyle = .none

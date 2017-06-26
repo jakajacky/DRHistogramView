@@ -13,9 +13,22 @@ class BgProgressViewCell: UITableViewCell {
   var titleLable = UILabel()
   var descriptionLabel = UILabel()
   
-  var bgProgressLayer:CAShapeLayer!
+  var bgProgressLayer:CAShapeLayer! // 进度条
+  var bgGradientLayer:CAGradientLayer! // 渐变色
   
-  var color:CGColor!
+  var color:CGColor! {
+    didSet {
+      if color == UIColor(red: 50/255.0, green: 213/255.0, blue: 80/255.0, alpha: 0.7).cgColor {
+        bgGradientLayer.colors = [UIColor.white.cgColor,UIColor(red: 50/255.0, green: 242/255.0, blue: 80/255.0, alpha: 0.7).cgColor,color]
+//        bgGradientLayer.colors = [UIColor.white.cgColor,UIColor(red: 50/255.0, green: 242/255.0, blue: 80/255.0, alpha: 0.8).cgColor,color,UIColor(red: 50/255.0, green: 242/255.0, blue: 80/255.0, alpha: 0.8).cgColor,UIColor.white.cgColor]
+      }
+      else {
+        bgGradientLayer.colors = [UIColor.white.cgColor,UIColor(red: 18/255.0, green: 183/255.0, blue: 219/255.0, alpha: 0.7).cgColor,color]
+//        bgGradientLayer.colors = [UIColor.white.cgColor,UIColor(red: 18/255.0, green: 183/255.0, blue: 219/255.0, alpha: 0.8).cgColor,color,UIColor(red: 18/255.0, green: 183/255.0, blue: 219/255.0, alpha: 0.8).cgColor,UIColor.white.cgColor]
+      }
+      
+    }
+  }
   
   var progress:CGFloat! = 0.0 {
     didSet {
@@ -38,6 +51,15 @@ class BgProgressViewCell: UITableViewCell {
     
     bgProgressLayer = CAShapeLayer()
     self.contentView.layer.addSublayer(bgProgressLayer)
+    
+    bgGradientLayer = CAGradientLayer()
+    let co = UIColor(red: 50, green: 213, blue: 80, alpha: 1).cgColor
+    bgGradientLayer.colors = [UIColor.white.cgColor,UIColor.green.cgColor,co,UIColor.white.cgColor]
+    bgGradientLayer.locations = [0.02,0.3,0.6,1]
+    bgGradientLayer.startPoint = CGPoint(x: 0, y: 0)
+    bgGradientLayer.endPoint   = CGPoint(x: 1.0, y: 0)
+    bgGradientLayer.frame      = bgProgressLayer.frame
+    bgProgressLayer.addSublayer(bgGradientLayer)
     
     iconView.snp.makeConstraints { (make) in
       make.left.equalTo(self).offset(10)
@@ -66,8 +88,8 @@ class BgProgressViewCell: UITableViewCell {
   override func draw(_ rect: CGRect) {
     oldPath = bgProgressLayer.path
     
-    bgProgressLayer.fillColor   = color
-    bgProgressLayer.strokeColor = color
+    bgProgressLayer.fillColor   = UIColor.white.cgColor
+    bgProgressLayer.strokeColor = UIColor.white.cgColor
     newPath = CGPath(roundedRect: CGRect(x:iconView.frame.maxX+10,y:0,width:(self.frame.width-iconView.frame.maxX-10)*progress,height:self.frame.height), cornerWidth: 0, cornerHeight: 0, transform: nil)
     bgProgressLayer.path = newPath
     let anim = CABasicAnimation(keyPath: "path")
@@ -76,6 +98,8 @@ class BgProgressViewCell: UITableViewCell {
     anim.duration  = 1
     anim.delegate = self
     bgProgressLayer.add(anim, forKey: "path")
+    
+    bgGradientLayer.frame      = CGRect(x:iconView.frame.maxX+10,y:0,width:(self.frame.width-iconView.frame.maxX-10)*progress,height:self.frame.height)
     
   }
   
