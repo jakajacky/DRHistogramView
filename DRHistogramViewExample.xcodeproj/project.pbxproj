@@ -720,11 +720,15 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_ENTITLEMENTS = MemoryReview/MemoryReview.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R6223ZBKTR;
 				INFOPLIST_FILE = MemoryReview/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lohas.MemoryReview.Review;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "DRHistogramViewExample/DRHistogramViewExample-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
@@ -737,11 +741,14 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_ENTITLEMENTS = MemoryReview/MemoryReview.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R6223ZBKTR;
 				INFOPLIST_FILE = MemoryReview/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lohas.MemoryReview.Review;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "DRHistogramViewExample/DRHistogramViewExample-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
@@ -851,6 +858,7 @@
 				CODE_SIGN_ENTITLEMENTS = DRHistogramViewExample/DRHistogramViewExample.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: vip_test@lohas-tech.com.cn (88D2S6TW7H)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R6223ZBKTR;
 				INFOPLIST_FILE = DRHistogramViewExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -875,12 +883,14 @@
 				CODE_SIGN_ENTITLEMENTS = DRHistogramViewExample/DRHistogramViewExample.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: vip_test@lohas-tech.com.cn (88D2S6TW7H)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R6223ZBKTR;
 				INFOPLIST_FILE = DRHistogramViewExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lohas.MemoryReview;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "DRHistogramViewExample/DRHistogramViewExample-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;

@@ -79,6 +79,7 @@ class DRPullToRefreshView: UIView {
   }
 }
 
+// MARK: UIScrollView Category
 private var UIScrollViewPullToRefreshView:uint = 0
 
 extension UIScrollView {
