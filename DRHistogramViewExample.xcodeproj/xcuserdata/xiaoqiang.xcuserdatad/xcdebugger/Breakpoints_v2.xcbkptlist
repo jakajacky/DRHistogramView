@@ -6,33 +6,97 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "DRHistogramViewExample/Supports/DRHistogramView.swift"
-            timestampString = "519906360.148076"
+            filePath = "DRHistogramViewExample/Supports/DRPullToRefreshView.swift"
+            timestampString = "520251285.978944"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "proportion"
-            landmarkType = "24">
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "refreshViewDidStartAnimation()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DRHistogramViewExample.DRPullToRefreshView.refreshViewDidStartAnimation() -&gt; ()"
+                  moduleName = "DRHistogramViewExample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xiaoqiang/Github/DRHistogramView/DRHistogramViewExample/Supports/DRPullToRefreshView.swift"
+                  timestampString = "520249946.823233"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "68">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in DRHistogramViewExample.DRPullToRefreshView.refreshViewDidStartAnimation() -&gt; ()"
+                  moduleName = "DRHistogramViewExample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xiaoqiang/Github/DRHistogramView/DRHistogramViewExample/Supports/DRPullToRefreshView.swift"
+                  timestampString = "520249946.825842"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "DRHistogramViewExample/Supports/BgProgressViewCell.swift"
-            timestampString = "520140125.111689"
+            filePath = "DRHistogramViewExample/Supports/DRPullToRefreshView.swift"
+            timestampString = "520251285.979269"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
-            landmarkName = "draw(_:)"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "refreshViewDidDisappear()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DRHistogramViewExample.DRPullToRefreshView.refreshViewDidDisappear() -&gt; ()"
+                  moduleName = "DRHistogramViewExample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xiaoqiang/Github/DRHistogramView/DRHistogramViewExample/Supports/DRPullToRefreshView.swift"
+                  timestampString = "520249964.500868"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in DRHistogramViewExample.DRPullToRefreshView.refreshViewDidDisappear() -&gt; ()"
+                  moduleName = "DRHistogramViewExample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xiaoqiang/Github/DRHistogramView/DRHistogramViewExample/Supports/DRPullToRefreshView.swift"
+                  timestampString = "520249964.502512"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

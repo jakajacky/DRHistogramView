@@ -50,7 +50,7 @@ class BgProgressViewCell: UITableViewCell {
     self.contentView.layer.addSublayer(bgProgressLayer)
     
     bgGradientLayer = CAGradientLayer()
-    let co = UIColor(red: 50, green: 213, blue: 80, alpha: 1).cgColor
+    let co = UIColor(red: 50/255.0, green: 213/255.0, blue: 80/255.0, alpha: 1).cgColor
     bgGradientLayer.colors = [UIColor.white.cgColor,UIColor.green.cgColor,co,UIColor.white.cgColor]
     bgGradientLayer.locations = [0.02,0.3,0.6,1]
     bgGradientLayer.startPoint = CGPoint(x: 0, y: 0)

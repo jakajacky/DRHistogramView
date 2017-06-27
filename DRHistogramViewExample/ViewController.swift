@@ -65,6 +65,13 @@ class ViewController: UIViewController {
   }
   
   override func viewDidAppear(_ animated: Bool) {
+    table.pullToRefreshWithCompletion {
+      print("----")
+      DispatchQueue.main.asyncAfter(deadline: .now()+5.0, execute: {
+        self.table.endRefresh()
+      })
+    }
+    
     reachability.whenReachable = { reachability in
       DispatchQueue.main.async {
         if reachability.isReachableViaWiFi {
