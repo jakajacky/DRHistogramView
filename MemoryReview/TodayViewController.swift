@@ -85,7 +85,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     if UIDevice.current.model.compare("iPad") == ComparisonResult.orderedSame {
       var rate = 522.0
       if self.view.frame.width>=1024 {
-        rate = 638.0
+        rate = 400.0
       }
       he.snp.makeConstraints { (make) in
         make.width.equalTo(rate*0.5)
@@ -102,15 +102,19 @@ class TodayViewController: UIViewController, NCWidgetProviding {
       }
     }
     else {
+      var rate = self.view.frame.width
+      if self.view.frame.width>=667 {
+        rate = 375.0
+      }
       he.snp.makeConstraints { (make) in
-        make.width.equalTo(self.view.frame.width*0.432)
+        make.width.equalTo(rate*0.432)
         make.height.equalTo(50)
         make.top.equalTo(50)
         make.right.equalTo(layoutAssitantor.snp.left).offset(-0.5)
       }
 
       hi.snp.makeConstraints { (make) in
-        make.width.equalTo(self.view.frame.width*0.432)
+        make.width.equalTo(rate*0.432)
         make.height.equalTo(50)
         make.top.equalTo(50)
         make.left.equalTo(layoutAssitantor.snp.right).offset(0.5)
@@ -187,7 +191,8 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     hi.proportion = (s-2.3)/total * 162.0
     he.proportion = (2048 - m) / 2048.0 * 162.0
-    
+    /*
+     ** 暂时去掉WiFi信号质量，因为API被封
     switch CurrentWIFIManager().getSignalStrength() {
     case 1:
       wifi.image = UIImage(named: "WIFI1")
@@ -202,6 +207,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
       wifi.image = UIImage(named: "WIFI3")
       break;
     }
+    */
     
     // wifi信息
     let wifiInfo = CurrentWIFIManager().getWIFIInfo()

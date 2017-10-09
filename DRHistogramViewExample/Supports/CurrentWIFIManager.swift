@@ -45,7 +45,6 @@ class CurrentWIFIManager: NSObject {
       print("没有找到状态栏")
       return 3;
     }
-    
   }
 
   
